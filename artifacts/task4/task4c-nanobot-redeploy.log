@@ -1,0 +1,32 @@
+nanobot-1  | 2026-03-28 20:41:17.447 | INFO     | nanobot.utils.evaluator:evaluate_response:87 - evaluate_response: should_notify=True, reason=The LMS backend health check shows a persistent error (4th consecutive HTTP 404 failure), indicating the service is down or misconfigured and requires attention.
+nanobot-1  | 2026-03-28 20:41:17.447 | INFO     | nanobot.cron.service:_execute_job:276 - Cron: job '🔍 LMS Backend Health Check' completed
+nanobot-1  | 2026-03-28 20:43:17.450 | INFO     | nanobot.cron.service:_execute_job:268 - Cron: executing job '🔍 LMS Backend Health Check' (f9529347)
+nanobot-1  | 2026-03-28 20:43:17.450 | INFO     | nanobot.agent.loop:_process_message:425 - Processing message from webchat:user: [Scheduled Task] Timer finished.
+nanobot-1  | 
+nanobot-1  | Task '🔍 LMS Backend Health Check' has been tri...
+nanobot-1  | 2026-03-28 20:43:17.477 | DEBUG    | nanobot.agent.memory:maybe_consolidate_by_tokens:323 - Token consolidation idle cron:f9529347: 6654/65536 via tiktoken
+nanobot-1  | 2026-03-28 20:43:22.535 | INFO     | nanobot.agent.loop:_prepare_tools:253 - Tool call: mcp_lms_lms_health({})
+nanobot-1  | 2026-03-28 20:43:25.471 | INFO     | nanobot.agent.loop:_process_message:479 - Response to webchat:user: ## 🔍 LMS Backend Health Check — Result
+nanobot-1  | 
+nanobot-1  | **Status:** ❌ Unhealthy  
+nanobot-1  | **Error:** HTTP 404  
+nanobot-1  | **Item Count:** Unknown
+nanobot-1  | 
+nanobot-1  | The LMS...
+nanobot-1  | 2026-03-28 20:43:25.498 | DEBUG    | nanobot.agent.memory:maybe_consolidate_by_tokens:323 - Token consolidation idle cron:f9529347: 6841/65536 via tiktoken
+nanobot-1  | 2026-03-28 20:43:32.560 | INFO     | nanobot.utils.evaluator:evaluate_response:87 - evaluate_response: should_notify=True, reason=LMS backend health check failed with HTTP 404 error - this is the 5th consecutive failure indicating a persistent service outage that requires attention.
+nanobot-1  | 2026-03-28 20:43:32.561 | INFO     | nanobot.cron.service:_execute_job:276 - Cron: job '🔍 LMS Backend Health Check' completed
+nanobot-1  | 2026-03-28 20:45:32.564 | INFO     | nanobot.cron.service:_execute_job:268 - Cron: executing job '🔍 LMS Backend Health Check' (f9529347)
+nanobot-1  | 2026-03-28 20:45:32.564 | INFO     | nanobot.agent.loop:_process_message:425 - Processing message from webchat:user: [Scheduled Task] Timer finished.
+nanobot-1  | 
+nanobot-1  | Task '🔍 LMS Backend Health Check' has been tri...
+nanobot-1  | 2026-03-28 20:45:32.599 | DEBUG    | nanobot.agent.memory:maybe_consolidate_by_tokens:323 - Token consolidation idle cron:f9529347: 6841/65536 via tiktoken
+nanobot-1  | 2026-03-28 20:45:36.248 | INFO     | nanobot.agent.loop:_prepare_tools:253 - Tool call: mcp_lms_lms_health({})
+nanobot-1  | 2026-03-28 20:45:41.727 | INFO     | nanobot.agent.loop:_process_message:479 - Response to webchat:user: ## 🔍 LMS Backend Health Check — Result
+nanobot-1  | 
+nanobot-1  | **Status:** ❌ Unhealthy  
+nanobot-1  | **Error:** Connection refused (http://backend:8000)  
+nanobot-1  | ...
+nanobot-1  | 2026-03-28 20:45:41.768 | DEBUG    | nanobot.agent.memory:maybe_consolidate_by_tokens:323 - Token consolidation idle cron:f9529347: 7069/65536 via tiktoken
+nanobot-1  | 2026-03-28 20:45:48.208 | INFO     | nanobot.utils.evaluator:evaluate_response:87 - evaluate_response: should_notify=True, reason=The health check detected an unhealthy backend service with a connection refused error, indicating the service is down and requires attention.
+nanobot-1  | 2026-03-28 20:45:48.208 | INFO     | nanobot.cron.service:_execute_job:276 - Cron: job '🔍 LMS Backend Health Check' completed

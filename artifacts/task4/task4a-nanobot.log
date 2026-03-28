@@ -1,0 +1,65 @@
+nanobot-1  | Using config: /app/nanobot/config.resolved.json
+nanobot-1  | 🐈 Starting nanobot gateway version 0.1.4.post5 on port 18790...
+nanobot-1  | 2026-03-28 19:57:48.401 | DEBUG    | nanobot.channels.registry:discover_all:64 - Skipping built-in channel 'matrix': Matrix dependencies not installed. Run: pip install nanobot-ai[matrix]
+nanobot-1  | 2026-03-28 19:57:48.726 | INFO     | nanobot.channels.manager:_init_channels:58 - WebChat channel enabled
+nanobot-1  | ✓ Channels enabled: webchat
+nanobot-1  | ✓ Heartbeat: every 1800s
+nanobot-1  | 2026-03-28 19:57:48.727 | INFO     | nanobot.cron.service:_load_store:85 - Cron: jobs.json modified externally, reloading
+nanobot-1  | 2026-03-28 19:57:48.728 | INFO     | nanobot.cron.service:start:202 - Cron service started with 0 jobs
+nanobot-1  | 2026-03-28 19:57:48.728 | INFO     | nanobot.heartbeat.service:start:124 - Heartbeat started (every 1800s)
+nanobot-1  | 2026-03-28 19:57:48.996 | INFO     | nanobot.channels.manager:start_all:91 - Starting webchat channel...
+nanobot-1  | 2026-03-28 19:57:48.997 | INFO     | nanobot.channels.manager:_dispatch_outbound:119 - Outbound dispatcher started
+nanobot-1  | 2026-03-28 19:57:49.743 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_health' from server 'lms'
+nanobot-1  | 2026-03-28 19:57:49.743 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_labs' from server 'lms'
+nanobot-1  | 2026-03-28 19:57:49.743 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_learners' from server 'lms'
+nanobot-1  | 2026-03-28 19:57:49.743 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_pass_rates' from server 'lms'
+nanobot-1  | 2026-03-28 19:57:49.743 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_timeline' from server 'lms'
+nanobot-1  | 2026-03-28 19:57:49.743 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_groups' from server 'lms'
+nanobot-1  | 2026-03-28 19:57:49.743 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_top_learners' from server 'lms'
+nanobot-1  | 2026-03-28 19:57:49.743 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_completion_rate' from server 'lms'
+nanobot-1  | 2026-03-28 19:57:49.743 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_sync_pipeline' from server 'lms'
+nanobot-1  | 2026-03-28 19:57:49.744 | INFO     | nanobot.agent.tools.mcp:connect_mcp_servers:246 - MCP server 'lms': connected, 9 tools registered
+nanobot-1  | [03/28/26 19:57:50] INFO     Processing request of type            server.py:720
+nanobot-1  |                              ListToolsRequest                                   
+nanobot-1  | 2026-03-28 19:57:50.521 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_obs_logs_search' from server 'obs'
+nanobot-1  | 2026-03-28 19:57:50.521 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_obs_logs_error_count' from server 'obs'
+nanobot-1  | 2026-03-28 19:57:50.521 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_obs_traces_list' from server 'obs'
+nanobot-1  | 2026-03-28 19:57:50.522 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_obs_traces_get' from server 'obs'
+nanobot-1  | 2026-03-28 19:57:50.522 | INFO     | nanobot.agent.tools.mcp:connect_mcp_servers:246 - MCP server 'obs': connected, 4 tools registered
+nanobot-1  | 2026-03-28 19:57:51.253 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_webchat_ui_message' from server 'webchat'
+nanobot-1  | 2026-03-28 19:57:51.253 | INFO     | nanobot.agent.tools.mcp:connect_mcp_servers:246 - MCP server 'webchat': connected, 1 tools registered
+nanobot-1  | 2026-03-28 19:57:51.253 | INFO     | nanobot.agent.loop:run:280 - Agent loop started
+nanobot-1  | 2026-03-28 20:00:46.650 | INFO     | nanobot.agent.loop:_process_message:425 - Processing message from webchat:0eeef6cd-132e-433e-a615-e8fdb0d6afe6: What labs are available?
+nanobot-1  | 2026-03-28 20:00:50.181 | INFO     | nanobot.agent.loop:_prepare_tools:253 - Tool call: mcp_lms_lms_labs({})
+nanobot-1  | 2026-03-28 20:00:52.511 | INFO     | nanobot.agent.loop:_prepare_tools:253 - Tool call: mcp_lms_lms_health({})
+nanobot-1  | 2026-03-28 20:00:55.462 | INFO     | nanobot.agent.loop:_prepare_tools:253 - Tool call: mcp_lms_lms_sync_pipeline({})
+nanobot-1  | 2026-03-28 20:01:04.383 | INFO     | nanobot.agent.loop:_process_message:479 - Response to webchat:0eeef6cd-132e-433e-a615-e8fdb0d6afe6: It looks like the LMS backend is currently unavailable. I'm getting HTTP 404 and 500 errors when trying to access the la...
+nanobot-1  | 2026-03-28 20:01:04.644 | DEBUG    | nanobot.agent.memory:maybe_consolidate_by_tokens:323 - Token consolidation idle webchat:0eeef6cd-132e-433e-a615-e8fdb0d6afe6: 6353/65536 via tiktoken
+nanobot-1  | 2026-03-28 20:03:56.110 | INFO     | nanobot.agent.loop:_process_message:425 - Processing message from webchat:0eeef6cd-132e-433e-a615-e8fdb0d6afe6: What went wrong?
+nanobot-1  | 2026-03-28 20:03:56.133 | DEBUG    | nanobot.agent.memory:maybe_consolidate_by_tokens:323 - Token consolidation idle webchat:0eeef6cd-132e-433e-a615-e8fdb0d6afe6: 6353/65536 via tiktoken
+nanobot-1  | 2026-03-28 20:04:05.347 | INFO     | nanobot.agent.loop:_prepare_tools:253 - Tool call: mcp_obs_logs_search({"service_name": "backend", "limit": 10, "minutes": 30})
+nanobot-1  | [03/28/26 20:04:05] INFO     Processing request of type            server.py:720
+nanobot-1  |                              CallToolRequest                                    
+nanobot-1  |                     INFO     HTTP Request: POST                  _client.py:1740
+nanobot-1  |                              http://victorialogs:9428/select/log                
+nanobot-1  |                              sql/query "HTTP/1.1 200 OK"                        
+nanobot-1  | 2026-03-28 20:04:09.265 | INFO     | nanobot.agent.loop:_prepare_tools:253 - Tool call: mcp_obs_logs_error_count({"service_name": "backend", "minutes": 30})
+nanobot-1  | [03/28/26 20:04:09] INFO     Processing request of type            server.py:720
+nanobot-1  |                              CallToolRequest                                    
+nanobot-1  |                     INFO     HTTP Request: POST                  _client.py:1740
+nanobot-1  |                              http://victorialogs:9428/select/log                
+nanobot-1  |                              sql/query "HTTP/1.1 200 OK"                        
+nanobot-1  | 2026-03-28 20:04:12.026 | INFO     | nanobot.agent.loop:_prepare_tools:253 - Tool call: mcp_obs_traces_list({"service_name": "backend", "limit": 5, "minutes": 30})
+nanobot-1  | [03/28/26 20:04:12] INFO     Processing request of type            server.py:720
+nanobot-1  |                              CallToolRequest                                    
+nanobot-1  |                     INFO     HTTP Request: GET                   _client.py:1740
+nanobot-1  |                              http://victoriatraces:10428/select/                
+nanobot-1  |                              jaeger/api/traces?service=backend&l                
+nanobot-1  |                              imit=5&start=1774726452054175&end=1                
+nanobot-1  |                              774728252054175 "HTTP/1.1 200 OK"                  
+nanobot-1  | 2026-03-28 20:04:17.902 | INFO     | nanobot.agent.loop:_process_message:479 - Response to webchat:0eeef6cd-132e-433e-a615-e8fdb0d6afe6: **Summary of the issue:**
+nanobot-1  | 
+nanobot-1  | The LMS backend service appears to be down or misconfigured:
+nanobot-1  | 
+nanobot-1  | - **API endpoints are returning...
+nanobot-1  | 2026-03-28 20:04:17.919 | DEBUG    | nanobot.agent.memory:maybe_consolidate_by_tokens:323 - Token consolidation idle webchat:0eeef6cd-132e-433e-a615-e8fdb0d6afe6: 6987/65536 via tiktoken

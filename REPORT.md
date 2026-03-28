@@ -121,3 +121,69 @@ Screenshot:
 
 Observed answer:
 > Good news! There are **no LMS backend errors** in the last 10 minutes. Both the error count and log search returned empty results, indicating the LMS service has been running without errors during that period.
+
+## Task 4A — Failure investigation response
+The affected service is Learning Management Service, and the failing operation is GET /items/, which is used to list available labs.
+
+I found a concrete failure fact during the incident window: the lab listing request returned HTTP 404 on /items/, the backend health check was reported as unhealthy with HTTP 404, and the sync pipeline failed with HTTP 500 Internal Server Error.
+
+This shows that the backend was reachable but not functioning correctly, so the problem was not with the user question. The LMS backend was in a failed or misconfigured state and could not return the lab list successfully.
+
+Based on the available evidence, the failure was on the backend side, and the lab data could not be served until the backend service was restored.
+
+## Task 4B — Proactive health check
+
+I created a cron-based LMS health check that runs every 2 minutes in the current Flutter chat.
+
+After PostgreSQL was stopped, I kept the failure state active and waited for the next scheduled run.
+
+On the next cron cycle, nanobot proactively posted a health report into the same chat without a new manual investigation request. The report correctly detected that the LMS backend was unhealthy and unavailable.
+
+Screenshot of the proactive report:
+
+![Task 4B proactive report](artifacts/task4/task4b-proactive-report.png)
+
+
+## Task 4C — Bug fix and recovery
+
+### Root cause
+
+The planted bug was in the backend failure-handling path for `GET /items/` in `backend/src/lms_backend/routers/items.py`.
+
+The `get_items()` route caught a broad `Exception` and converted any internal backend or database failure into:
+
+- HTTP 404
+- `detail="Items not found"`
+
+Because of that, when PostgreSQL was down, the real SQLAlchemy / database failure was hidden and misreported as a false `404 Items not found`.
+
+### Fix
+
+I fixed the bug by removing the broad exception handler from `get_items()`.
+
+Before the fix, the route masked real internal failures and returned a misleading 404 response.
+
+After the fix, the route now lets the real exception propagate to the global backend exception handler, so the actual backend or database failure becomes visible instead of being hidden behind `Items not found`.
+
+### Post-fix failure check
+
+After redeploying the backend, I stopped PostgreSQL again, triggered the same LMS-backed request path through nanobot, and then asked:
+
+> What went wrong?
+
+This time, the result no longer followed the buggy `404 Items not found` failure path. The agent surfaced the real underlying backend or database failure instead.
+
+Screenshot:
+
+![Task 4C post-fix failure investigation](artifacts/task4/task4c-postfix-what-went-wrong.png)
+
+### Healthy follow-up
+
+After restarting PostgreSQL, I created a fresh short health check in the current chat and waited for the next cron cycle.
+
+The later scheduled health report showed that the system looked healthy again.
+
+Screenshot:
+
+![Task 4C healthy follow-up](artifacts/task4/task4c-healthy-report.png)
+
