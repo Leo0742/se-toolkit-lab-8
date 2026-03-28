@@ -1,0 +1,33 @@
+qwen-code-api-1  | INFO:     127.0.0.1:60448 - "GET /health HTTP/1.1" 200 OK
+qwen-code-api-1  | INFO:     Shutting down
+qwen-code-api-1  | INFO:     Waiting for application shutdown.
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:06:53.864218Z", "level": "INFO", "logger": "qwen_code_api.utils.live_logger", "message": "server"}
+qwen-code-api-1  | INFO:     Application shutdown complete.
+qwen-code-api-1  | INFO:     Finished server process [1]
+qwen-code-api-1  | INFO:     Started server process [1]
+qwen-code-api-1  | INFO:     Waiting for application startup.
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:06:57.762538Z", "level": "INFO", "logger": "qwen_code_api.utils.live_logger", "message": "server"}
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:06:57.763635Z", "level": "INFO", "logger": "qwen_code_api", "message": "Default credentials: valid"}
+qwen-code-api-1  | INFO:     Application startup complete.
+qwen-code-api-1  | INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+qwen-code-api-1  | INFO:     127.0.0.1:56470 - "GET /health HTTP/1.1" 200 OK
+qwen-code-api-1  | INFO:     127.0.0.1:42146 - "GET /health HTTP/1.1" 200 OK
+qwen-code-api-1  | INFO:     127.0.0.1:51106 - "GET /health HTTP/1.1" 200 OK
+qwen-code-api-1  | INFO:     127.0.0.1:39316 - "GET /health HTTP/1.1" 200 OK
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:08:47.350297Z", "level": "INFO", "logger": "qwen_code_api.utils.live_logger", "message": "request"}
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:08:51.673072Z", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://portal.qwen.ai/v1/chat/completions \"HTTP/1.1 200 OK\""}
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:08:51.675785Z", "level": "INFO", "logger": "qwen_code_api.utils.live_logger", "message": "response"}
+qwen-code-api-1  | INFO:     172.19.0.6:42078 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:08:51.789691Z", "level": "INFO", "logger": "qwen_code_api.utils.live_logger", "message": "request"}
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:08:54.752746Z", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://portal.qwen.ai/v1/chat/completions \"HTTP/1.1 200 OK\""}
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:08:54.754656Z", "level": "INFO", "logger": "qwen_code_api.utils.live_logger", "message": "response"}
+qwen-code-api-1  | INFO:     172.19.0.6:42078 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:08:54.824307Z", "level": "INFO", "logger": "qwen_code_api.utils.live_logger", "message": "request"}
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:08:57.476892Z", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://portal.qwen.ai/v1/chat/completions \"HTTP/1.1 200 OK\""}
+qwen-code-api-1  | {"timestamp": "2026-03-28T19:08:57.479427Z", "level": "INFO", "logger": "qwen_code_api.utils.live_logger", "message": "response"}
+qwen-code-api-1  | INFO:     172.19.0.6:42078 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+qwen-code-api-1  | INFO:     127.0.0.1:38570 - "GET /health HTTP/1.1" 200 OK
+qwen-code-api-1  | INFO:     127.0.0.1:55428 - "GET /health HTTP/1.1" 200 OK
+qwen-code-api-1  | INFO:     127.0.0.1:57750 - "GET /health HTTP/1.1" 200 OK
+qwen-code-api-1  | INFO:     127.0.0.1:57248 - "GET /health HTTP/1.1" 200 OK
+qwen-code-api-1  | INFO:     127.0.0.1:60416 - "GET /health HTTP/1.1" 200 OK
