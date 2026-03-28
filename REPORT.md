@@ -74,3 +74,50 @@ Cron service started with 0 jobs
 Heartbeat started (every 1800s)
 MCP server 'lms': connected, 9 tools registered
 Agent loop started
+
+![Task 3 VictoriaLogs screenshot](artifacts/task3/task3-victorialogs.png)
+![Task 3 VictoriaTraces query screenshot](artifacts/task3/task3-victoriatraces-query.png)
+![Task 3 VictoriaTraces result screenshot](artifacts/task3/task3-victoriatraces-result.png)
+
+## Task 3C — Observability MCP tools
+### Registered MCP tools and loaded skill
+
+Observed MCP tools:
+- `mcp_obs_logs_search`
+- `mcp_obs_logs_error_count`
+- `mcp_obs_traces_list`
+- `mcp_obs_traces_get`
+
+The observability skill is present in:
+`nanobot/workspace/skills/observability/SKILL.md`
+
+Relevant log excerpt:
+```text
+MCP: registered tool 'mcp_obs_logs_search' from server 'obs'
+MCP: registered tool 'mcp_obs_logs_error_count' from server 'obs'
+MCP: registered tool 'mcp_obs_traces_list' from server 'obs'
+MCP: registered tool 'mcp_obs_traces_get' from server 'obs'
+MCP server 'obs': connected, 4 tools registered
+```
+
+### VictoriaTraces UI evidence
+
+Query screenshot:
+
+![Task 3 VictoriaTraces query screenshot](artifacts/task3/task3-victoriatraces-query.png)
+
+Result screenshot:
+
+![Task 3 VictoriaTraces result screenshot](artifacts/task3/task3-victoriatraces-result.png)
+
+### Nanobot answer evidence
+
+Nanobot successfully answered the scoped observability question:
+“Any LMS backend errors in the last 10 minutes?”
+
+Screenshot:
+
+![Task 3 Nanobot success screenshot](artifacts/task3/task3-nanobot-success.png)
+
+Observed answer:
+> Good news! There are **no LMS backend errors** in the last 10 minutes. Both the error count and log search returned empty results, indicating the LMS service has been running without errors during that period.
